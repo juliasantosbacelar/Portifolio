@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Julia Bacelar — Dev Frontend" />
+    <meta property="og:description" content="Portfólio pessoal — projetos, skills e contato." />
+    <meta property="og:image" content="link-da-minha-imagem.jpg" />
+    <meta property="og:url" content="linkoficialdosite" />
+    <meta property="og:type" content="website" />
+    <title>Julia Bacelar — Dev Frontend</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/euLogo.png" type="image/png">
+</head>
+<body>
+
+<!-- NAV BAR -->
+<header>
+    <nav>
+        <div class="nav-logo-wrap">
+            <div class="logo-avatar" id="logoAvatar">
+                <img id="logoImg" src="img/euLogo.png" alt="foto de julia bacelar" />
+                <span class="logo-initials">Jb</span>
+            </div>
+            <a class="nav-logo" href="#hero">Julia<span>.</span></a>
+        </div>
+
+        <button class="nav-hamburguer" id="navToggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre"><span class="pt">Sobre</span></a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projetos"><span class="pt">Projetos</span></a></li>
+            <li><a href="#experiencia"><span class="pt">Trajetória</span></a></li>
+            <li><a href="#contato"><span class="pt">Contato</a></li>
+
+            <li class="nav-mobile-controls">
+                <div class="lang-toggle" id="langToggleMobile">
+                    <button class="lang-btn" type="button" data-lang="pt-BR" aria-pressed="true">BR</button>
+                    <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <button class="theme-toggle" id="themeToggleMobile" title="Alternar tema">☀️</button>
+            </li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="nav-socials">
+                <a class="nav-icon" href="https://github.com/juliasantosbacelar" target="_blank" title="GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 7.4c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                </a>
+                <a class="nav-icon" href="https://www.linkedin.com/in/julia-bacelar/" target="_blank" title="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+            </div>
+            <!--<div class="lang-toggle" id="langToggle">
+                <button class="lang-btn" type="button" data-lang="pt-BR" aria-pressed="true">BR</button>
+                <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+            /*Atualizações futuras vou colocar 
+            <button class="theme-toggle" id="themeToggle" title="Alternar tema">☀️</button>-->
+            <a href="img/CV Julia bacelar (4).pdf" download="Julia Bacelar - Curriculo" class="nav-btn">
+                <span class="pt">Currículo</span><span class="en">Resume</span>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">
+            <span class="pt" id="typing-text"></span><br>
+            
+            <div id="hero-reveal" class="hidden">
+                <span class="hero-title-outline">Julia Bacelar</span>
+            </div>
+        </h1>
+
+        <div id="hero-elements-reveal" class="hidden">
+            <p class="hero-role pt">Dev FrontEnd · Design · JavaScript · HTML/CSS </p>
+            
+            <div class="hero-ctas">
+                <a href="#projetos" class="btn-primario"><span class="pt">Projetos</span></a>
+                <a href="#contato" class="btn-secundario"><span class="pt">Contato</span></a>
+            </div>
+        </div>
+    </div>
+</section>        <!--<div class="hero-stats">
+            <div class="stat">
+                <span class="stat-numero">2+</span>
+                <span class="stat-label pt">Projetos Concluídos</span>
+            </div>
+            <div class="stat">
+                <span class="stat-numero">22</span>
+                <span class="stat-label pt">Anos de idade</span>
+            </div>
+            <div class="stat">
+                <span class="stat-numero">2+</span>
+                <span class="stat-label pt">Tecnologias</span>
+                
+            </div>
+        </div>-->
+    </div>
+
+  <!-- Fiz para aprender mas n gostei
+    <div class="hero-card">
+        <div class="card-topo">
+            <div class="card-avatar">Jb</div>
+            <div>
+                <div class="card-nome">Julia Bacelar</div>
+                <div class="card-cargo pt">Dev Frontend</div>
+                <div class="card-cargo en">Frontend Developer</div>
+            </div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-info-row"><div class="card-info-icone">📍</div><span>Santos, SP</span></div>
+        <div class="card-info-row"><div class="card-info-icone">📱</div><span>+55 (13) 98828-2592</span></div>
+        <div class="card-info-row"><div class="card-info-icone">✉️</div><span>juliasblima@hotmail.com</span></div>
+        <div class="card-info-row"><div class="card-info-icone">🐙</div><span>github.com/juliasantoslima</span></div>
+        <div class="card-divider"></div>
+        <div class="card-disponivel">
+            <span class="card-disponivel-dot"></span>
+            <span class="pt">Disponível para Estágio</span>
+            <span class="en">Available for internship</span>
+        </div>
+        <div class="card-chips">
+            <span class="chip">HTML/CSS</span><span class="chip">Figma</span>
+            <span class="chip">JavaScript</span><span class="chip">Illustrator</span>
+            <span class="chip">C++</span><span class="chip">Git</span>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-formacao">
+            <div class="card-formacao-icone">🎓</div>
+            <div>
+                <div class="card-nome" style="font-size:13px">
+                    <span class="pt">Sistemas para Internet</span>
+                    <span class="en">Systems for the Internet</span>
+                </div>
+                <div class="card-cargo">
+                    <span class="pt">Fatec RL · Desde 08/2025</span>
+                    <span class="en">Fatec RL · Since 08/2025</span>
+                </div>
+            </div>
+        </div>
+        <div class="card-divider"></div>
+        <a href="#contato" class="card-btn">
+            <span class="pt">Contato →</span>
+            <span class="en">Get in touch →</span>
+        </a>
+    </div>-->
+</section>
+
+<!-- SOBRE MIM -->
+<section id="sobre">
+    <div class="secao-container">
+        <div class="sobre-grid">
+            <div class="sobre-esquerda">
+                <div class="sobre-foto-wrap">
+                    <img src="img/euCafeteria.png" alt="Foto de Julia Bacelar" class="sobre-foto-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="sobre-foto-fallback">JB</div>
+                </div>
+                <div class="sobre-sociais">
+                    <a class="nav-icon" href="https://github.com/juliasantosbacelar" target="_blank" title="GitHub">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 7.4c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+                    </a>
+                    <a class="nav-icon" href="https://www.linkedin.com/in/julia-bacelar" target="_blank" title="LinkedIn">
+                       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    </a>
+                    <a class="nav-icon" href="mailto:juliasblima@hotmail.com" title="Email">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="sobre-direita">
+                <p class="secao-label"><span class="pt">Sobre mim</span><span class="en">About me</span></p>
+                <h2 class="secao-titulo"><span class="pt">Quem sou eu</span><span class="en">Who I am</span></h2>
+                <p class="sobre-texto pt">
+                Estudante de SI na Fatec RL - Baixada Santista, com foco em desenvolvimento web e design, sou apaixonada por transformar ideias em interfaces funcionais e intuitivas. Atuei em projetos acadêmicos, voluntariado em empresa júnior e estágio na prefeitura de Cubatão, experiências que reforçaram minha proatividade e versatilidade. Procuro um ambiente onde eu possa contribuir com soluções criativas, aprender novas tecnologias e crescer junto com a equipe.
+                </p>
+               
+                
+               <!-- <div class="sobre-tags">
+                    <span class="tag">Belo Horizonte, MG</span>
+                    <span class="tag"><span class="pt">Remoto</span><span class="en">Remote</span></span>
+                    <span class="tag"><span class="pt">Aberto a Estágio</span><span class="en">Open to internship</span></span>
+                    <span class="tag"><span class="pt">Dev Jr. Disponível</span><span class="en">Jr. Dev available</span></span>
+                    <span class="tag"><span class="pt">Inglês Intermediário</span><span class="en">Intermediate English</span></span>
+                </div>-->
+                <a href="img/CV Julia bacelar (4).pdf" download="Julia Bacelar - Curriculo.pdf" class="btn-primario" style="display:inline-block;margin-top:20px;">
+                    <span class="pt">Baixar currículo ↓</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SESSÃO SKILLS -->
+<section id="skills">
+    <div class="secao-container">
+        <p class="secao-label"><span class="pt">Tecnologias</span></p>
+        
+        <div class="skills-flex-container">
+            
+            <div class="bloco-skills">
+                <h2 class="secao-titulo-H"><span class="pt">Hard Skills</span></h2>
+                <div class="ferramentas-grid">
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">JS</div>JavaScript</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">HTML</div>HTML</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">CSS</div>CSS</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">C#</div>C#</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">C</div>C</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">C++</div><span class="pt">C++</span></div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">VS</div>VS Code</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">Fg</div>FIGMA</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">AP</div><span class="pt">Adobe Photoshop</span></div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">I</div><span class="pt">Illustrator</span></div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">Pp</div><span class="pt">PhotoPea</span></div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">Gt</div>Git</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">GH</div>GitHub</div>
+                </div>
+            </div>
+            <div class="bloco-skills">
+                <p class="secao-label-S"><span class="pt">Habilidades Comportamentais</span></p>
+                <h2 class="secao-titulo-S"><span class="pt">Soft Skills</span></h2>
+                <div class="ferramentas-grid">
+                    <div class="ferramenta-badge"><div class="ferramenta-icone">·</div>Trabalho em Grupo</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone"><3</div>Liderança</div>
+                    <div class="ferramenta-badge"><div class="ferramenta-icone"><3</div>Resolução de Problemas</div>
+                </div>
+            </div>
+
+        </div> </div>
+</section>
+
+<!-- SESSÃO PROJETOS -->
+<section id="projetos">
+    <div class="secao-container">
+        <div class="projetos-header">
+            <div>
+                <p class="secao-label"><span class="pt">Portfólio</span></p>
+                <h2 class="secao-titulo" style="margin-bottom:0"><span class="pt">Projetos</span></h2>
+            </div>
+            <div class="proj-filtros">
+                <button class="filtro ativo" onclick="filtrar(this,'todos')"><span class="pt">Todos</span></button>
+                <button class="filtro" onclick="filtrar(this,'backend')">Back-end</button>
+                <button class="filtro" onclick="filtrar(this,'frontend')">Front-end</button>
+                <button class="filtro" onclick="filtrar(this,'fullstack')">Full Stack</button>
+                <button class="filtro" onclick="filtrar(this,'design')">Design</button>
+            </div>
+        </div>
+        <div class="projetos-grid" id="projetosGrid">
+            <div class="proj-card" data-categoria="frontend">
+                <div class="proj-thumb t1"></div>
+                <div class="proj-body">
+                    <div class="proj-nome"><span class="pt">Landing Page — ONG Mais Amor</span></div>
+                    <div class="proj-desc pt">Aplicação web responsiva para capitação de clientes. Desenvolvida em HTML, CSS e JavaScript.</div>
+                    <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span></div>
+                    <div class="proj-btns"><a href="https://aninha8925.github.io/Prj_MaisAmor/" target="_blank" class="pbtn pbtn-g">GitHub</a></div>
+                </div>
+            </div>
+            <div class="proj-card" data-categoria="frontend fullstack">
+                <div class="proj-thumb t2">Comming soon...</div>
+                <div class="proj-body">
+                    <div class="proj-nome"><span class="pt">Landing Page — Psicóloga Julianny Bacelar</span></div>
+                    <div class="proj-desc pt">
+                        Aplicação web responsiva para. HTML, CSS e JavaScript com foco em usabilidade.</div>
+                    
+                    <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span></div>
+                    <div class="proj-btns"><a href="#" class="pbtn pbtn-g">GitHub</a></div>
+                </div>
+            </div>
+            <div class="proj-card" data-categoria="design">
+                <div class="proj-thumb t3"></div>
+                <div class="proj-body">
+                    <div class="proj-nome"><span class="pt">Design de Landing Page — Psicóloga Julianny Bacelar</span></div>
+                    <div class="proj-desc pt"> Desenvolvimento das interfaces para a landing page da psicóloga Julianny Bacelar.</div>
+                    
+                    <div class="proj-tags"><span class="ptag">FIGMA</span></div>
+                    <div class="proj-btns"><a href="https://www.figma.com/design/WsE46blLdkQRiGz4sRmfeR/SitePsicologia-JuliannyBacelar?node-id=1-3&t=o9C4p5unWL9mA0Li-1" target="_blank" class="pbtn pbtn-g">Figma</a></div>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/juliasantosbacelar" target="_blank" class="ver-mais">
+            <span class="pt">Ver todos no GitHub →</span>
+        </a>
+    </div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experiencia">
+    <div class="secao-container">
+        <p class="secao-label"><span class="pt">Trajetória</span></p>
+        <h2 class="secao-titulo"><span class="pt">Educação</span></h2>
+        <div class="exp-layout">
+            <div>
+                <p class="secao-label" style="margin-bottom:16px"><span class="pt">Formação</span></p>
+                <div class="exp-lista">
+                    <div class="exp-item">
+                        <div class="exp-tl"><div class="exp-dot"></div><div class="exp-linha"></div></div>
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div class="exp-cargo"><span class="pt">Sistemas para Internet</span></div>
+                                <div class="exp-periodo"><span class="pt">08/2025–atual</span></div>
+                            </div>
+                            <div class="exp-empresa"><span class="pt">Fatec Rubens Lara - Baixada Santista · Cursando</span></div>
+                            <div class="exp-desc pt">Formação voltada ao desenvolvimento web, com foco em criação de sistemas, interfaces, banco de dados e uso de tecnologias modernas.</div>
+                            
+                            <div class="proj-tags"><span class="ptag">Design</span><span class="ptag">C++</span><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span><span class="ptag">Pensamento Lógico</span></div>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-tl"><div class="exp-dot"></div></div>
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div class="exp-cargo"><span class="pt">Técnico em Informática Integrado ao Ensino Médio</span></div>
+                                <div class="exp-periodo">02/2019–12/2022</div>
+                            </div>
+                            <div class="exp-empresa">IFSP - Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - Campus Cubatão</div>
+                            <div class="exp-desc pt">Conclusão do ensino médio com um largo contato com tecnologia. 4 anos imersos em atividades tecnológicas.</div>
+                        
+                            <div class="proj-tags"><span class="ptag">Lógica</span><span class="ptag">Tecnologia</span><span class="ptag">Hardware</span><span class="ptag">Software</span><span class="ptag">Trabalho em grupo</span></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="secao-label" style="margin-bottom:16px"><span class="pt">Experiência</span></p>
+
+                <div class="exp-lista">
+                    <div class="exp-item">
+                        <div class="exp-tl"><div class="exp-dot"></div></div>
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div class="exp-cargo"><span class="pt">Prefeitura Municipal de Cubatão</span></div>
+                                <div class="exp-periodo">08/2021–12/2022</div>
+                            </div>
+                            <div class="exp-empresa">Estagiaria de informática</div>
+                            <div class="exp-desc pt"> · Realização de atualizações de sistema em equipamentos garantindo o correto funcionamento.</div>
+                            <div class="exp-desc pt"> · Configuração de Desktops e Notebooks, ajustando o sistema de acordo com as necessidades dos usuários.</div>
+                            <div class="exp-desc pt"> · Inspeção dos equipamentos da empresa, registrando as conformidades e não conformidades com as normas de segurança e qualidade.</div>
+                            <div class="exp-desc pt"> · Otimizei a configuração de equipamentos, reduzindo chamados de suporte em 70%.</div>
+                            <div class="exp-desc pt"> · Reparo de equipamentos, substituindo componentes defeituosos e garantindo ocorreto funcionamento.</div>
+                            <div class="exp-desc pt"> · Prestação de serviço remoto, com ênfase na comunicação e transparência para fornecer um serviço de alta qualidade.</div>
+                        
+                            <div class="proj-tags"><span class="ptag"> Suporte técnico</span><span class="ptag">Hardware</span><span class="ptag">Software</span><span class="ptag">Atendimento ao cliente</span></div>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-tl"><div class="exp-dot"></div></div>
+                        <div class="exp-card">
+                            <div class="exp-header">
+                                <div class="exp-cargo"><span class="pt">Therion - Empresa Júnior</span></div>
+                                <div class="exp-periodo">06/2023–02/2024</div>
+                            </div>
+                            <div class="exp-empresa">Assesora de projetos</div>
+                            <div class="exp-desc pt"> · Modelagem e prototipagem 3D.</div>
+                            <div class="exp-desc pt"> · Desenvolvimento de sites: WordPress ou utilizando HTML, CSS e JavaScript.</div>
+                            <div class="exp-desc pt"> · Utilização de frameworks como React e Tailwind CSS para desenvolvimento de sites.</div>
+                            <div class="exp-desc pt"> · Desenvolvimento de Aplicativos.</div>
+                        
+                            <div class="proj-tags"><span class="ptag"> Liderança</span><span class="ptag">Resolução de Problemas</span><span class="ptag">Dev Frontend</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="secao-label" style="margin-bottom:16px"><span class="pt">Certificados & cursos</span></p>
+                <div class="cert-card">
+                    <div class="cert-icone">🖥️</div>
+                    <div>
+                        <div class="cert-nome"><span class="pt">Introdução à Cybersegurança</span></div>
+                        <div class="cert-org">CISCO</div>
+                        <div class="cert-ano">2026</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icone">🖥️</div>
+                    <div>
+                        <div class="cert-nome"><span class="pt">Desenvolvimento WEB</span></div>
+                        <div class="cert-org">IFSP - Campus Cubatão</div>
+                        <div class="cert-ano">2025</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icone">🖥️</div>
+                    <div>
+                        <div class="cert-nome"><span class="pt">Landing Pages no WordPress com Elementor</span></div>
+                        <div class="cert-org">Fundação Bradesco</div>
+                        <div class="cert-ano">2024</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icone">📜</div>
+                    <div>
+                        <div class="cert-nome"><span class="pt">Regulação da preocupação e da ansiedade</span></div>
+                        <div class="cert-org">Fundação Bradesco</div>
+                        <div class="cert-ano">2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+    <div class="secao-container">
+        <p class="secao-label"><span class="pt">Contato</span><span class="en">Contact</span></p>
+        <div class="contato-layout">
+            <div class="contato-info">
+                 <h2 class="secao-titulo"><span class="pt">Vamos criar algo juntos</span><span class="en">Let's create something together</span></h2>
+                    <p class="sobre-texto pt">Se gostou e quer me conhecer melhor, entre em contato! Prometo responder em até 24h.</p>
+                    <p class="sobre-texto en">If you liked it and want to get to know me better, feel free to contact me! I promise to respond within 24h.</p>
+                <a class="contato-card" href="mailto:juliasblima@hotmail.com">
+                    <div class="contato-icone"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+                    <div><div class="contato-label"><span class="pt">E-mail</span><span class="en">Email</span></div><div class="contato-valor">juliasblima@hotmail.com</div></div>
+                </a>
+                <a class="contato-card" href="https://wa.me/13988282592" target="_blank">
+                    <div class="contato-icone"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.8 11.8 0 0 0 12 0C5.37 0 0 5.37 0 12a11.9 11.9 0 0 0 1.64 6L0 24l6.2-1.62A12 12 0 0 0 24 12a11.8 11.8 0 0 0-3.48-8.52zM12 21.82a9.8 9.8 0 0 1-5-1.37l-.36-.2-3.68.96.98-3.58-.24-.37A9.7 9.7 0 0 1 2.2 12c0-5.4 4.4-9.8 9.8-9.8a9.8 9.8 0 0 1 9.8 9.8c0 5.4-4.4 9.82-9.8 9.82zm5.64-7.3c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.23-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.48.7.3 1.25.48 1.67.61.7.22 1.35.19 1.86.11.57-.09 1.75-.72 2-1.41.25-.7.25-1.3.17-1.42-.08-.12-.27-.19-.57-.34z"/></svg></div>
+                    <div><div class="contato-label">WhatsApp</div><div class="contato-valor">+55 (13) 98828-2592</div></div>
+                </a>
+                <a class="contato-card" href="https://www.linkedin.com/in/julia-bacelar/" target="_blank">
+                    <div class="contato-icone"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></div>
+                    <div><div class="contato-label">LinkedIn</div><div class="contato-valor">linkedin.com/in/julia-bacelar</div></div>
+                </a>
+                <a class="contato-card" href="https://github.com/juliasantosbacelar" target="_blank">
+                    <div class="contato-icone"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 7.4c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg></div>
+                    <div><div class="contato-label">GitHub</div><div class="contato-valor">github.com/juliasantosbacelar</div></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <span class="footer-copy">
+            <span class="pt">© 2026 Julia Bacelar </span>
+            <span class="en">© 2026 Julia Bacelar </span>
+        </span>
+        <div class="footer-icones">
+            <a class="nav-icon" href="https://github.com/juliasantosbacelar" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 7.4c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg></a>
+            <a class="nav-icon" href="https://www.linkedin.com/in/julia-bacelar/" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+<script src="script.js"></script>
+</body>
+</html>
